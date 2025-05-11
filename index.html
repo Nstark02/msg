@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Goodbye & Goodnight</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #111;
+      color: white;
+      padding-top: 100px;
+      transition: background-color 1s;
+    }
+    h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+    .hidden {
+      display: none;
+    }
+    iframe {
+      margin-top: 30px;
+      border: 5px solid white;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="msg1">1 Goodbye!</h1>
+  <h1 id="msg2" class="hidden"> 2 Goodnight 🌙</h1>
+  <div id="rickroll" class="hidden">
+    <h2>...also 3 , you've been Rickrolled! see you soon  😎</h2>
+    <iframe width="560" height="315" 
+      src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" 
+      title="Rick Astley - Never Gonna Give You Up" 
+      frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+    </iframe>
+  </div>
+
+  <script>
+    setTimeout(() => {
+      document.getElementById('msg1').classList.add('hidden');
+      document.getElementById('msg2').classList.remove('hidden');
+    }, 2000);
+
+    setTimeout(() => {
+      document.body.style.backgroundColor = "#222";
+      document.getElementById('msg2').classList.add('hidden');
+      document.getElementById('rickroll').classList.remove('hidden');
+    }, 5000);
+  </script>
+</body>
+</html>
